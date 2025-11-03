@@ -1,0 +1,199 @@
+@media (max-width: 1270px) {
+    .mobileMenu{
+        display: flex;
+    }
+    .head nav{
+        display: none;
+    }
+    .head{
+        gap: 15rem;
+    }
+    .mobileMenu a {
+        font-family: "Lora", sans-serif;
+        font-size: 17px;
+        text-decoration: none;
+        color: #1A3853;
+        font-weight: 500;
+    }
+    .whyWeCars{
+        padding: 0 20px;
+        justify-content: center;
+    }
+
+    .servicesCards{
+        gap: 2rem;
+        justify-content: center;
+    }
+    .workCadrs{
+        gap: 1rem;
+        justify-content: center;
+    }
+}
+
+
+
+@media (max-width: 970px) {
+h1{
+    font-size: 50px;
+}
+    .head{
+        gap: 14rem;
+    }
+    .linksHeader{
+        display: none;
+    }
+    .priceCard img {
+        display: none;
+    }
+    .imgForm{
+        display: none;
+    }
+    .forms{
+        justify-content: center;
+    }
+    .blockFooterContact{
+    flex-direction: column;
+        justify-content: center;
+    }
+}
+@media (max-width: 768px) {
+    .reviews-slider {
+        width: 99%;
+        justify-content: flex-start;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch; /
+    }
+
+    .reviews-slider-container {
+        overflow: visible; /* Разрешаем скролл */
+    }
+
+    .reviewCadr {
+        scroll-snap-align: center; /* Центрируем текущий слайд */
+        margin: 0 10px; /* Отступы между слайдами */
+    }
+
+    /* Скрываем стрелки на мобилках */
+    .slider-arrow {
+        display: none;
+    }
+
+}
+
+@media (max-width: 470px) {
+    .head{
+        gap: 6rem;
+    }
+    form{
+        width: 82%;
+    }
+    textarea{
+        width: 100%;
+    }
+    h1{
+        font-size: 25px;
+    }
+    .mainSectionTitle{
+        font-size: 20px;
+    }
+    .developerText{
+        font-size: 20px;
+    }
+    .btnMainOne{
+        justify-content: center;
+    }
+    .blockCompanyCard{
+        flex-direction: column;
+        height: auto;
+        justify-content: center;
+    }
+    .buttons{
+        width: 100%;
+    }
+    .btnSubmit{
+        width: 100%;
+        margin-left: 20px;
+    }
+    .blockCompanyCards{
+        border-right:none;
+        height: 100px;
+        justify-content: center;
+    }
+    .blockCompanyMainTextDescription{
+        padding: 0 10px;
+    }
+    .blockCompanyCardsNumber{
+        font-size: 35px;
+
+    }
+    .moreCompanyAling{
+        padding-top: 80px;
+    }
+    .imgServicesMain{
+    width: 300px;
+    }
+    .servicesCard{
+        width: 300px;
+    }
+    .servicesLinks{
+        width: 100%;
+    }
+    .imgServices{
+        width: 100%;
+        height: 360px;
+    }
+    .servicesCard{
+        padding: 20px 20px 28px 16px;
+    }
+    .priceSevices{
+        margin-top: 80px;
+    }
+    .moreServices{
+        flex-direction: column;
+        height: auto;
+        padding: 20px 0;
+    }
+    .btnPrice{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .textPrice{
+        font-size: 20px;
+    }
+    .imgCard{
+        max-width: 300px;
+        max-height: 300px;
+    }
+    .video-container video{
+        width: 300px;
+    }
+    .play-pause-btn{
+        left: 50%;
+    }
+    .forms{
+        justify-content: start;
+    }
+    input {
+        width: 100%;
+    }
+    .blocksFooter{
+        flex-direction: column;
+        padding: 0 20px;
+        padding-top: 50px;
+    }
+    .downBlock{
+        flex-direction: column;
+        padding: 0 20px;
+        padding-top: 50px;
+        gap: 20px;
+        padding-bottom: 50px;
+    }
+.imgWork{
+    width: 100%;
+}
+    .reviewCadr{
+        width: auto;
+    }
+}
