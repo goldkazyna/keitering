@@ -19,7 +19,44 @@ document.addEventListener('DOMContentLoaded', function() {
             mobileNavOverlay.classList.remove('active');
             body.style.overflow = '';
         }
+		// Мобильное выпадающее меню - аккордеон
+		const mobileDropdownToggles = document.querySelectorAll('.mobile-dropdown-toggle');
+		
+		mobileDropdownToggles.forEach(toggle => {
+			toggle.addEventListener('click', function(e) {
+				e.preventDefault();
+				e.stopPropagation();
+				
+				const dropdown = this.parentElement;
+				const menu = dropdown.querySelector('.mobile-dropdown-menu');
+				const isActive = this.classList.contains('active');
+				
+				// Закрываем все другие открытые меню
+				document.querySelectorAll('.mobile-dropdown-toggle').forEach(item => {
+					if (item !== toggle) {
+						item.classList.remove('active');
+						item.parentElement.querySelector('.mobile-dropdown-menu').classList.remove('active');
+					}
+				});
+				
+				// Переключаем текущее меню
+				if (isActive) {
+					this.classList.remove('active');
+					menu.classList.remove('active');
+				} else {
+					this.classList.add('active');
+					menu.classList.add('active');
+				}
+			});
+		});
 
+		// Закрываем аккордеон при клике на ссылку внутри
+		const mobileDropdownLinks = document.querySelectorAll('.mobile-dropdown-menu a');
+		mobileDropdownLinks.forEach(link => {
+			link.addEventListener('click', function() {
+				closeMenuFunc();
+			});
+		});
         hamburger.addEventListener('click', openMenu);
         closeMenu.addEventListener('click', closeMenuFunc);
         mobileNavOverlay.addEventListener('click', closeMenuFunc);

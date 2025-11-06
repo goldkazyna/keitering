@@ -1,3 +1,63 @@
+/* Мобильное выпадающее меню - аккордеон */
+.mobile-dropdown {
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.mobile-dropdown-toggle {
+    width: 100%;
+    background: none;
+    border: none;
+    color: #1A3853;
+    font-size: 16px;
+    padding: 12px 0;
+    text-align: left;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: "Lora", sans-serif;
+    font-weight: 500;
+}
+
+.mobile-dropdown-toggle .arrow {
+    transition: transform 0.3s ease;
+    font-size: 12px;
+    color: #50667E;
+}
+
+.mobile-dropdown-toggle.active .arrow {
+    transform: rotate(180deg);
+}
+
+.mobile-dropdown-menu {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    background: #f8f9fa;
+    border-radius: 4px;
+    margin: 10px 0;
+}
+
+.mobile-dropdown-menu.active {
+    max-height: 500px;
+}
+
+.mobile-dropdown-menu a {
+    display: block;
+    color: #1A3853;
+    padding: 10px 15px;
+    text-decoration: none;
+    font-size: 14px;
+    font-family: "Lora", sans-serif;
+    border-left: 3px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.mobile-dropdown-menu a:hover {
+    background: #fff;
+    border-left-color: #50667E;
+    padding-left: 20px;
+}
 @media (max-width: 1270px) {
     .mobileMenu{
         display: flex;

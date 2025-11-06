@@ -131,8 +131,8 @@ nav a {
 }
 
 .linksHeader{
-    width: 223px;
-    height: 60px;
+	width: 200px;
+    height: 45px;
     align-items: center;
     background: #50667E;
     border-radius: 4px;

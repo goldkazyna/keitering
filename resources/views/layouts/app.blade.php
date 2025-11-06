@@ -27,23 +27,55 @@
                 <img src="{{ asset('img/logo.png') }}" alt="">
             </div>
             <nav class="desktop-nav">
-                <a href="{{ route('home') }}">Главная</a>
-                <a href="{{ route('almaty') }}">Города</a>
-                <div class="dropdown">
-                    <a href="{{ route('uslugi') }}" class="dropdown-toggle">Услуги</a>
-                    <div class="dropdown-menu">
-                        <a href="{{ route('uslugi.coffee-break') }}">Кофе брейк</a>
-                        <a href="{{ route('uslugi.furshet') }}">Фуршет</a>
-                        <a href="{{ route('uslugi.banket') }}">Выездной банкет</a>
-                        <a href="{{ route('uslugi.vyezdnoy-keitering') }}">Выездной кейтеринг</a>
-                    </div>
-                </div>
-                <a href="{{ route('o-kompanii') }}">О Компании</a>
-                <a href="{{ route('portfolio') }}">Портфолио</a>
-                <a href="{{ route('kontakty') }}">Контакты</a>
-            </nav>
-            <a class="linksHeader" href="{{ route('zakazat') }}">
-                Заказать кейтеринг
+				<a href="{{ route('home') }}">Главная</a>
+				
+				<div class="dropdown">
+					<a href="" class="dropdown-toggle">Города</a>
+					<div class="dropdown-menu">
+						<a href="{{ route('almaty') }}">Алматы</a>
+						<a href="{{ route('astana') }}">Астана</a>
+					</div>
+				</div>
+				
+				<div class="dropdown">
+					<a href="{{ route('uslugi') }}" class="dropdown-toggle">Услуги</a>
+					<div class="dropdown-menu">
+						<a href="{{ route('uslugi.coffee-break') }}">Кофе брейк</a>
+						<a href="{{ route('uslugi.furshet') }}">Фуршет</a>
+						<a href="{{ route('uslugi.banket') }}">Выездной банкет</a>
+						<a href="{{ route('uslugi.vyezdnoy-keitering') }}">Выездной кейтеринг</a>
+					</div>
+				</div>
+				
+				<div class="dropdown">
+					<a href="{{ route('menu') }}" class="dropdown-toggle">Меню</a>
+					<div class="dropdown-menu">
+						<a href="{{ route('menu.coffee-break') }}">Меню кофе брейка</a>
+						<a href="{{ route('menu.furshet') }}">Фуршетное меню</a>
+						<a href="{{ route('menu.banket') }}">Банкетное меню</a>
+					</div>
+				</div>
+				
+				<div class="dropdown">
+					<a href="{{ route('ceny') }}" class="dropdown-toggle">Цены</a>
+					<div class="dropdown-menu">
+						<a href="{{ route('ceny.almaty') }}">Цены на кейтеринг в Алматы</a>
+						<a href="{{ route('ceny.astana') }}">Цены на кейтеринг в Астане</a>
+					</div>
+				</div>
+				
+				<div class="dropdown">
+					<a href="" class="dropdown-toggle">Наша компания</a>
+					<div class="dropdown-menu">
+						<a href="{{ route('o-kompanii') }}">О Компании</a>
+						<a href="{{ route('portfolio') }}">Портфолио</a>
+						<a href="{{ route('blog') }}">Блог</a>
+						<a href="{{ route('kontakty') }}">Контакты</a>
+					</div>
+				</div>
+			</nav>
+            <a class="linksHeader" href="tel:+7 (701) 267-29-92">
+				Позвонить
             </a>
             <!-- Гамбургер кнопка -->
             <button class="hamburger">
@@ -54,21 +86,83 @@
         </div>
         <!-- Мобильное меню сбоку -->
         <div class="mobile-nav-overlay"></div>
-        <nav class="mobile-nav">
-            <div class="mobile-nav-header">
-                <button class="close-menu">
-                    <span>×</span>
-                </button>
-            </div>
-            <div class="mobile-nav-content">
-                <a href="{{ route('home') }}">Главная</a>
-                <a href="{{ route('almaty') }}">Города</a>
-                <a href="{{ route('o-kompanii') }}">О Компании</a>
-                <a href="{{ route('portfolio') }}">Портфолио</a>
-                <a href="{{ route('kontakty') }}">Контакты</a>
-                <a class="mobile-order-btn" href="{{ route('zakazat') }}">Заказать кейтеринг</a>
-            </div>
-        </nav>
+		<nav class="mobile-nav">
+			<div class="mobile-nav-header">
+				<button class="close-menu">
+					<span>×</span>
+				</button>
+			</div>
+			<div class="mobile-nav-content">
+				<a href="{{ route('home') }}">Главная</a>
+				
+				<!-- Города -->
+				<div class="mobile-dropdown">
+					<button class="mobile-dropdown-toggle">
+						Города
+						<span class="arrow">▼</span>
+					</button>
+					<div class="mobile-dropdown-menu">
+						<a href="{{ route('almaty') }}">Алматы</a>
+						<a href="{{ route('astana') }}">Астана</a>
+					</div>
+				</div>
+				
+				<!-- Услуги -->
+				<div class="mobile-dropdown">
+					<button class="mobile-dropdown-toggle">
+						Услуги
+						<span class="arrow">▼</span>
+					</button>
+					<div class="mobile-dropdown-menu">
+						<a href="{{ route('uslugi.coffee-break') }}">Кофе брейк</a>
+						<a href="{{ route('uslugi.furshet') }}">Фуршет</a>
+						<a href="{{ route('uslugi.banket') }}">Выездной банкет</a>
+						<a href="{{ route('uslugi.vyezdnoy-keitering') }}">Выездной кейтеринг</a>
+					</div>
+				</div>
+				
+				<!-- Меню -->
+				<div class="mobile-dropdown">
+					<button class="mobile-dropdown-toggle">
+						Меню
+						<span class="arrow">▼</span>
+					</button>
+					<div class="mobile-dropdown-menu">
+						<a href="{{ route('menu.coffee-break') }}">Меню кофе брейка</a>
+						<a href="{{ route('menu.furshet') }}">Фуршетное меню</a>
+						<a href="{{ route('menu.banket') }}">Банкетное меню</a>
+					</div>
+				</div>
+				
+				<!-- Цены -->
+				<div class="mobile-dropdown">
+					<button class="mobile-dropdown-toggle">
+						Цены
+						<span class="arrow">▼</span>
+					</button>
+					<div class="mobile-dropdown-menu">
+						<a href="{{ route('ceny.almaty') }}">Цены на кейтеринг в Алматы</a>
+						<a href="{{ route('ceny.astana') }}">Цены на кейтеринг в Астане</a>
+					</div>
+				</div>
+				
+				<!-- Наша компания -->
+				<div class="mobile-dropdown">
+					<button class="mobile-dropdown-toggle">
+						Наша компания
+						<span class="arrow">▼</span>
+					</button>
+					<div class="mobile-dropdown-menu">
+						<a href="{{ route('o-kompanii') }}">О Компании</a>
+						<a href="{{ route('portfolio') }}">Портфолио</a>
+						<a href="{{ route('blog') }}">Блог</a>
+						<a href="{{ route('kontakty') }}">Контакты</a>
+					</div>
+				</div>
+				
+				<a class="mobile-order-btn" href="tel:+77012672992">Позвонить</a>
+			</div>
+		</nav>
     </div>
 </header>
 
