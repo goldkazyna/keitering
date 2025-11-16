@@ -43,7 +43,6 @@
 						<a href="{{ route('uslugi.coffee-break') }}">Кофе брейк</a>
 						<a href="{{ route('uslugi.furshet') }}">Фуршет</a>
 						<a href="{{ route('uslugi.banket') }}">Выездной банкет</a>
-						<a href="{{ route('uslugi.vyezdnoy-keitering') }}">Выездной кейтеринг</a>
 					</div>
 				</div>
 				
