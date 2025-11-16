@@ -33,7 +33,7 @@
             <div class="services-grid">
                 <!-- Кофе-брейк -->
                 <div class="service-card">
-                    <div class="service-image" style="background-image: url('{{ asset('img/services/coffee-break.jpg') }}');">
+                    <div class="service-image" style="background-image: url('{{ asset('img/coffee-break-about.jpg') }}');">
                         <div class="service-overlay"></div>
                     </div>
                     <div class="service-content">
@@ -56,7 +56,7 @@
 
                 <!-- Фуршет -->
                 <div class="service-card">
-                    <div class="service-image" style="background-image: url('{{ asset('img/services/furshet.jpg') }}');">
+                    <div class="service-image" style="background-image: url('{{ asset('img/furshet-about.jpg') }}');">
                         <div class="service-overlay"></div>
                     </div>
                     <div class="service-content">
@@ -79,7 +79,7 @@
 
                 <!-- Выездной банкет -->
                 <div class="service-card">
-                    <div class="service-image" style="background-image: url('{{ asset('img/services/banket.jpg') }}');">
+                    <div class="service-image" style="background-image: url('{{ asset('img/banket-about.jpg') }}');">
                         <div class="service-overlay"></div>
                     </div>
                     <div class="service-content">
