@@ -159,3 +159,39 @@ Route::get('/kontakty', function () {
 Route::get('/zakazat', function () {
     return view('pages.zakazat');
 })->name('zakazat');
+
+// Страницы услуг с выбором города
+Route::get('/uslugi/services/coffee-break', function () {
+    return view('pages.services.coffee-break');
+})->name('services.coffee-break');
+
+Route::get('/uslugi/services/furshet', function () {
+    return view('pages.services.furshet');
+})->name('services.furshet');
+
+Route::get('/uslugi/services/banket', function () {
+    return view('pages.services.banket');
+})->name('services.banket');
+
+// Страницы цен
+Route::get('/almaty/prices', function () {
+    return view('pages.almaty.prices');
+})->name('almaty.prices');
+
+Route::get('/astana/prices', function () {
+    return view('pages.astana.prices');
+})->name('astana.prices');
+
+// Админ-панель
+Route::prefix('admin')->name('admin.')->group(function () {
+    Route::get('/login', [App\Http\Controllers\Admin\AuthController::class, 'showLoginForm'])->name('login');
+    Route::post('/login', [App\Http\Controllers\Admin\AuthController::class, 'login'])->name('login.submit');
+
+    Route::middleware(['auth', 'admin'])->group(function () {
+        Route::get('/dashboard', function () {
+            return view('admin.dashboard');
+        })->name('dashboard');
+		Route::resource('news', App\Http\Controllers\Admin\NewsController::class);    
+        Route::post('/logout', [App\Http\Controllers\Admin\AuthController::class, 'logout'])->name('logout');
+    });
+});
