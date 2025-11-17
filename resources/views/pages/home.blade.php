@@ -8,8 +8,8 @@
 <section class="mainSection">
     <div class="video-bg">
         <video autoplay muted loop playsinline>
-            <source src="video/reviews.mp4" type="video/mp4">
-            <source src="video/reviews.mp4" type="video/webm">
+            <source src="video/video1.mp4" type="video/mp4">
+            <source src="video/video1.mp4" type="video/webm">
             Ваш браузер не поддерживает видео
         </video>
         <div class="video-overlay"></div>
