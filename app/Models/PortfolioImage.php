@@ -26,11 +26,25 @@ class PortfolioImage extends Model
         parent::boot();
 
         static::deleting(function ($image) {
+            // Удаляем из storage/app/public
             Storage::disk('public')->delete([
                 $image->original_path,
                 $image->large_path,
                 $image->medium_path,
             ]);
+            
+            // Удаляем из public/storage (для хостингов без симлинков)
+            $publicPaths = [
+                public_path('storage/' . $image->original_path),
+                public_path('storage/' . $image->large_path),
+                public_path('storage/' . $image->medium_path),
+            ];
+            
+            foreach ($publicPaths as $path) {
+                if (file_exists($path)) {
+                    unlink($path);
+                }
+            }
         });
     }
 }

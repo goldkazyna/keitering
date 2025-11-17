@@ -110,13 +110,28 @@ class ImageService
      */
     private function saveAsWebP($image, $path, $quality)
     {
-        $tempPath = storage_path('app/public/' . $path);
-        $directory = dirname($tempPath);
+        // Сохраняем в storage/app/public
+        $storagePath = storage_path('app/public/' . $path);
+        $storageDirectory = dirname($storagePath);
         
-        if (!file_exists($directory)) {
-            mkdir($directory, 0755, true);
+        if (!file_exists($storageDirectory)) {
+            mkdir($storageDirectory, 0755, true);
         }
         
-        imagewebp($image, $tempPath, $quality);
+        imagewebp($image, $storagePath, $quality);
+        
+        // ДОПОЛНИТЕЛЬНО: Копируем в public/storage для хостингов без симлинков
+        $publicPath = public_path('storage/' . $path);
+        $publicDirectory = dirname($publicPath);
+        
+        if (!file_exists($publicDirectory)) {
+            mkdir($publicDirectory, 0755, true);
+        }
+        
+        // Копируем файл
+        if (file_exists($storagePath)) {
+            copy($storagePath, $publicPath);
+            chmod($publicPath, 0644);
+        }
     }
 }
