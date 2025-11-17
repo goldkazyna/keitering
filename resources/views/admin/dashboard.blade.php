@@ -166,7 +166,17 @@
 				<h3>Блог / Новости</h3>
 				<p>Управление статьями блога и новостями компании</p>
 			</a>
-
+			<a href="{{ route('admin.portfolio-categories.index') }}" class="module-card">
+				<div class="module-icon">
+					<svg width="32" height="32" viewBox="0 0 24 24" fill="none">
+						<rect x="3" y="3" width="18" height="18" rx="2" stroke="white" stroke-width="2"/>
+						<circle cx="8.5" cy="8.5" r="1.5" fill="white"/>
+						<path d="M21 15l-5-5L5 21" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+					</svg>
+				</div>
+				<h3>Портфолио</h3>
+				<p>Управление категориями и фотографиями работ</p>
+			</a>	
             <div class="module-card" style="opacity: 0.5; cursor: not-allowed;">
                 <div class="module-icon">
                     <svg width="32" height="32" viewBox="0 0 24 24" fill="none">

@@ -191,7 +191,17 @@ Route::prefix('admin')->name('admin.')->group(function () {
         Route::get('/dashboard', function () {
             return view('admin.dashboard');
         })->name('dashboard');
-		Route::resource('news', App\Http\Controllers\Admin\NewsController::class);    
+		Route::resource('news', App\Http\Controllers\Admin\NewsController::class);
+	// CRUD для портфолио
+		Route::resource('portfolio-categories', App\Http\Controllers\Admin\PortfolioCategoryController::class);
+		
+		// Управление изображениями портфолио
+		Route::post('/portfolio-categories/{category}/images', [App\Http\Controllers\Admin\PortfolioImageController::class, 'store'])
+			->name('portfolio-images.store');
+		Route::delete('/portfolio-images/{image}', [App\Http\Controllers\Admin\PortfolioImageController::class, 'destroy'])
+			->name('portfolio-images.destroy');
+		Route::post('/portfolio-categories/{category}/images/reorder', [App\Http\Controllers\Admin\PortfolioImageController::class, 'updateOrder'])
+			->name('portfolio-images.reorder');		
         Route::post('/logout', [App\Http\Controllers\Admin\AuthController::class, 'logout'])->name('logout');
     });
 });

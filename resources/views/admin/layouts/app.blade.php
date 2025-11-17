@@ -404,6 +404,7 @@
             <nav class="header-nav">
                 <a href="{{ route('admin.dashboard') }}">Dashboard</a>
                 <a href="{{ route('admin.news.index') }}">Новости</a>
+				<a href="{{ route('admin.portfolio-categories.index') }}">Портфолио</a>
             </nav>
             <div class="header-user">
                 <span class="user-name">{{ Auth::user()->name }}</span>
