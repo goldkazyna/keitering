@@ -5,6 +5,40 @@
 @section('keywords', 'кейтеринг алматы, кейтеринг астана, фуршет, банкет, кофе брейк')
 
 @section('content')
+<style>
+@media (max-width: 768px) {
+.ttt{
+	padding-top:100px;
+}
+.company{
+	padding-top:0px;
+}
+.blockCompanyMainTextTitel{
+	font-size: 25px;
+}
+.blockCompanyMainText{
+	padding-top:90px;
+}
+.blockCompanyMainTextDescription{
+	font-size: 17px;
+}
+.moreCompanyAling{
+	        padding-top: 40px;
+}
+.whyWeCard, .servicesCard{
+	width:100%;
+}
+.priceSevices, .imgServices{
+	justify-content: center;
+}
+.imgServicesMain{
+	        width: 340px;
+}
+.textPrice{
+	padding:30px 10px 0px 10px;
+}
+}
+</style>
 <section class="mainSection">
     <div class="video-bg">
         <video autoplay muted loop playsinline>
@@ -18,7 +52,7 @@
 
     <div class="main">
         <div class="mainText">
-            <h1>ИЗЫСКАННЫЙ КЕЙТЕРИНГ <br>
+            <h1 class="ttt">ИЗЫСКАННЫЙ КЕЙТЕРИНГ <br>
                 ДЛЯ ВАШЕГО СОБЫТИЯ  <br>В АЛМАТЫ ИЛИ В АСТАНЕ</h1>
         </div>
         <h2 class="mainSectionTitle">ОРГАНИЗАЦИЯ ФУРШЕТОВ, БАНКЕТОВ И КОФЕ БРЕЙКОВ</h2>
@@ -144,7 +178,7 @@
                 <h2 class="servicesCardTitle">Кофе - брейк</h2>
                 <div class="imgServices">
                     <div class="imgServicesText">
-                        <p class="imgServicesTextTitle">Текст в несколько предложений в три строки, описывающий услугу кратко, но достаточно ёмко, больше текста к...</p>
+                        
                     </div>
                     <img class="imgServicesMain" src="img/services1.png" alt="">
                 </div>
@@ -163,7 +197,7 @@
                 <h2 class="servicesCardTitle">Фуршет</h2>
                 <div class="imgServices">
                     <div class="imgServicesText">
-                        <p class="imgServicesTextTitle">Текст в несколько предложений в три строки, описывающий услугу кратко, но достаточно ёмко, больше текста к...</p>
+                        
                     </div>
                     <img class="imgServicesMain" src="img/services2.png" alt="">
                 </div>
@@ -183,7 +217,7 @@
                 <h2 class="servicesCardTitle">Кофе - брейк</h2>
                 <div class="imgServices">
                     <div class="imgServicesText">
-                        <p class="imgServicesTextTitle">Текст в несколько предложений в три строки, описывающий услугу кратко, но достаточно ёмко, больше текста к...</p>
+                       
                     </div>
                     <img class="imgServicesMain" src="img/services3.png" alt="">
                 </div>

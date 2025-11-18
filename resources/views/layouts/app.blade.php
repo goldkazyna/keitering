@@ -24,7 +24,7 @@
             <div>
                 <a href="{{ route('home') }}"><img class="imgRectangle" src="{{ asset('img/rectangle.png') }}" alt=""></a>
                 <a href="{{ route('home') }}"><img class="imgBludo" src="{{ asset('img/logoP.png') }}" alt=""></a>
-                <a href="{{ route('home') }}"><img src="{{ asset('img/logo.png') }}" alt=""></a>
+                <a href="{{ route('home') }}"><img src="{{ asset('img/logo.png') }}" alt="" class="logo"></a>
             </div>
             <nav class="desktop-nav">
 				<a href="{{ route('home') }}">Главная</a>
@@ -257,7 +257,7 @@
 	/* ===================================
    Плавающая кнопка WhatsApp
    =================================== */
-
+.linksFooterAbout ul li a{color:#ffffff;}
 .whatsapp-float {
     position: fixed;
     bottom: 30px;
@@ -315,6 +315,19 @@
         width: 28px;
         height: 28px;
     }
+	.logo{
+		width:150px;
+	}
+	.imgBludo{
+       display:none;
+	}
+	.head{
+padding: 15px 0px 15px 0px;
+gap: 14rem;
+	}
+	.mobile-nav-content{
+		padding: 20px 20px 20px 20px !important;
+	}
 }
 	</style>
 </body>
