@@ -254,6 +254,7 @@
 	
 	
 	<style>
+
 	/* ===================================
    Плавающая кнопка WhatsApp
    =================================== */
@@ -310,7 +311,16 @@
         width: 56px;
         height: 56px;
     }
-    
+    .mobile-nav-content{
+		width:70%;
+	}
+	.mobile-dropdown-menu a{
+		padding:10px;
+		border-left:10px solid #1A3853;
+	}
+	.mobile-dropdown-menu{
+		background:#ffffff;
+	}
     .whatsapp-float svg {
         width: 28px;
         height: 28px;
@@ -318,6 +328,10 @@
 	.logo{
 		width:150px;
 	}
+	.mobile-dropdown-toggle{
+		padding:0px;
+	}
+	
 	.imgBludo{
        display:none;
 	}
