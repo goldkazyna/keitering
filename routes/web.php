@@ -1,7 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\BlogController;
+use App\Http\Controllers\PortfolioController;
 // Главная страница
 Route::get('/', function () {
     return view('pages.home');
@@ -144,13 +145,11 @@ Route::get('/o-kompanii', function () {
     return view('pages.o-kompanii');
 })->name('o-kompanii');
 
-Route::get('/portfolio', function () {
-    return view('pages.portfolio');
-})->name('portfolio');
+Route::get('/portfolio', [PortfolioController::class, 'index'])->name('portfolio');
+Route::get('/portfolio/{slug}', [PortfolioController::class, 'show'])->name('portfolio.show');
 
-Route::get('/blog', function () {
-    return view('pages.blog.index');
-})->name('blog');
+Route::get('/blog', [BlogController::class, 'index'])->name('blog');
+Route::get('/blog/{slug}', [BlogController::class, 'show'])->name('blog.show');
 
 Route::get('/kontakty', function () {
     return view('pages.kontakty');

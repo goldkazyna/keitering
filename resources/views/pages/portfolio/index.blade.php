@@ -1,21 +1,21 @@
 @extends('layouts.app')
 
-@section('title', 'Блог - Ёжик Кейтеринг')
-@section('description', 'Новости и статьи о кейтеринге в Алматы и Астане')
+@section('title', 'Портфолио - Ёжик Кейтеринг')
+@section('description', 'Наши работы по организации кейтеринга в Алматы и Астане')
 
 @section('content')
 <style>
-    .blog-page {
+    .portfolio-page {
         padding: 100px 0 80px;
         background: #F3F3F3;
     }
 
-    .blog-header {
+    .portfolio-header {
         text-align: center;
         margin-bottom: 60px;
     }
 
-    .blog-header h1 {
+    .portfolio-header h1 {
         font-family: "Lora", sans-serif;
         font-size: 42px;
         color: #1A3853;
@@ -24,20 +24,20 @@
         padding-top: 10px;
     }
 
-    .blog-header p {
+    .portfolio-header p {
         font-family: "Lora", sans-serif;
         font-size: 18px;
         color: #666;
     }
 
-    .blog-grid {
+    .portfolio-grid {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         gap: 40px;
         margin-bottom: 60px;
     }
 
-    .blog-card {
+    .portfolio-card {
         background: white;
         border-radius: 12px;
         overflow: hidden;
@@ -49,30 +49,30 @@
         color: inherit;
     }
 
-    .blog-card:hover {
+    .portfolio-card:hover {
         transform: translateY(-8px);
         box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
     }
 
-    .blog-card-image {
+    .portfolio-card-image {
         width: 100%;
         height: 300px;
         overflow: hidden;
         position: relative;
     }
 
-    .blog-card-image img {
+    .portfolio-card-image img {
         width: 100%;
         height: 100%;
         object-fit: cover;
         transition: transform 0.3s ease;
     }
 
-    .blog-card:hover .blog-card-image img {
+    .portfolio-card:hover .portfolio-card-image img {
         transform: scale(1.05);
     }
 
-    .blog-card-date {
+    .portfolio-card-count {
         position: absolute;
         top: 20px;
         left: 20px;
@@ -83,16 +83,19 @@
         font-family: "Lora", sans-serif;
         font-size: 14px;
         font-weight: 500;
+        display: flex;
+        align-items: center;
+        gap: 5px;
     }
 
-    .blog-card-content {
+    .portfolio-card-content {
         padding: 30px;
         flex-grow: 1;
         display: flex;
         flex-direction: column;
     }
 
-    .blog-card-title {
+    .portfolio-card-title {
         font-family: "Lora", sans-serif;
         font-size: 24px;
         color: #1A3853;
@@ -105,7 +108,7 @@
         overflow: hidden;
     }
 
-    .blog-card-excerpt {
+    .portfolio-card-description {
         font-family: "Lora", sans-serif;
         font-size: 16px;
         color: #666;
@@ -118,7 +121,7 @@
         overflow: hidden;
     }
 
-    .blog-card-link {
+    .portfolio-card-link {
         font-family: "Lora", sans-serif;
         font-size: 16px;
         color: #FF750F;
@@ -129,11 +132,11 @@
         transition: gap 0.3s ease;
     }
 
-    .blog-card:hover .blog-card-link {
+    .portfolio-card:hover .portfolio-card-link {
         gap: 12px;
     }
 
-    .blog-card-link svg {
+    .portfolio-card-link svg {
         width: 20px;
         height: 20px;
     }
@@ -197,61 +200,66 @@
 
     /* Адаптив */
     @media (max-width: 768px) {
-        .blog-page {
+        .portfolio-page {
             padding: 80px 0 60px;
         }
 
-        .blog-header h1 {
+        .portfolio-header h1 {
             font-size: 32px;
         }
 
-        .blog-grid {
+        .portfolio-grid {
             grid-template-columns: 1fr;
             gap: 30px;
         }
 
-        .blog-card-image {
+        .portfolio-card-image {
             height: 250px;
         }
 
-        .blog-card-content {
+        .portfolio-card-content {
             padding: 20px;
         }
 
-        .blog-card-title {
+        .portfolio-card-title {
             font-size: 20px;
         }
     }
 </style>
 
-<div class="blog-page">
+<div class="portfolio-page">
     <div class="main">
-        <div class="blog-header">
-            <h1>Блог и новости</h1>
-            <p>Последние новости из мира кейтеринга</p>
+        <div class="portfolio-header">
+            <h1>Наше портфолио</h1>
+            <p>Работы по организации кейтеринга</p>
         </div>
 
-        @if($news->count() > 0)
-            <div class="blog-grid">
-                @foreach($news as $article)
-                    <a href="{{ route('blog.show', $article->slug) }}" class="blog-card">
-                        <div class="blog-card-image">
-                            @if($article->image)
-                                <img src="{{ asset('storage/' . $article->image) }}" alt="{{ $article->title }}">
+        @if($categories->count() > 0)
+            <div class="portfolio-grid">
+                @foreach($categories as $category)
+                    <a href="{{ route('portfolio.show', $category->slug) }}" class="portfolio-card">
+                        <div class="portfolio-card-image">
+                            @if($category->images->count() > 0)
+                                <img src="{{ asset('storage/' . $category->images->first()->medium_path) }}" alt="{{ $category->name }}">
                             @else
-                                <img src="{{ asset('img/blog-placeholder.jpg') }}" alt="{{ $article->title }}">
+                                <img src="{{ asset('img/portfolio-placeholder.jpg') }}" alt="{{ $category->name }}">
                             @endif
-                            <div class="blog-card-date">
-                                {{ $article->published_at->format('d.m.Y') }}
+                            <div class="portfolio-card-count">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
+                                    <circle cx="8.5" cy="8.5" r="1.5"/>
+                                    <polyline points="21 15 16 10 5 21"/>
+                                </svg>
+                                {{ $category->images_count }} фото
                             </div>
                         </div>
-                        <div class="blog-card-content">
-                            <h2 class="blog-card-title">{{ $article->title }}</h2>
-                            @if($article->excerpt)
-                                <p class="blog-card-excerpt">{{ $article->excerpt }}</p>
+                        <div class="portfolio-card-content">
+                            <h2 class="portfolio-card-title">{{ $category->name }}</h2>
+                            @if($category->description)
+                                <p class="portfolio-card-description">{{ $category->description }}</p>
                             @endif
-                            <span class="blog-card-link">
-                                Читать далее
+                            <span class="portfolio-card-link">
+                                Смотреть работы
                                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                     <path d="M5 12h14M12 5l7 7-7 7"/>
                                 </svg>
@@ -262,18 +270,18 @@
             </div>
 
             {{-- Пагинация --}}
-            @if($news->hasPages())
+            @if($categories->hasPages())
                 <div class="pagination">
                     {{-- Предыдущая --}}
-                    @if ($news->onFirstPage())
+                    @if ($categories->onFirstPage())
                         <span class="disabled">←</span>
                     @else
-                        <a href="{{ $news->previousPageUrl() }}">←</a>
+                        <a href="{{ $categories->previousPageUrl() }}">←</a>
                     @endif
 
                     {{-- Номера страниц --}}
-                    @foreach ($news->getUrlRange(1, $news->lastPage()) as $page => $url)
-                        @if ($page == $news->currentPage())
+                    @foreach ($categories->getUrlRange(1, $categories->lastPage()) as $page => $url)
+                        @if ($page == $categories->currentPage())
                             <span class="active">{{ $page }}</span>
                         @else
                             <a href="{{ $url }}">{{ $page }}</a>
@@ -281,8 +289,8 @@
                     @endforeach
 
                     {{-- Следующая --}}
-                    @if ($news->hasMorePages())
-                        <a href="{{ $news->nextPageUrl() }}">→</a>
+                    @if ($categories->hasMorePages())
+                        <a href="{{ $categories->nextPageUrl() }}">→</a>
                     @else
                         <span class="disabled">→</span>
                     @endif
@@ -290,7 +298,7 @@
             @endif
         @else
             <div class="empty-state">
-                <h2>Пока нет опубликованных новостей</h2>
+                <h2>Пока нет категорий портфолио</h2>
                 <p>Следите за обновлениями!</p>
             </div>
         @endif
