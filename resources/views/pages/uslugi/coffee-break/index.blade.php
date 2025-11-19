@@ -494,7 +494,9 @@
     .service-hero h1 {
         font-size: 32px;
     }
-
+	.service-hero h1 {
+        font-size: 32px;
+    }
     .hero-subtitle {
         font-size: 18px;
     }

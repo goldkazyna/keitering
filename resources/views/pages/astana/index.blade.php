@@ -462,7 +462,9 @@ h2 {
         padding-top: 100px;
         padding-bottom: 40px;
     }
-
+	.city-hero h1{
+		padding-top:0px;
+	}
     .city-hero h1 {
         font-size: 32px;
     }

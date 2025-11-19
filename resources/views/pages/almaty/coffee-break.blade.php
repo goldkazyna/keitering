@@ -930,7 +930,7 @@ h2 {
     }
 
     .info-grid {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(1, 1fr);
         gap: 20px;
     }
 

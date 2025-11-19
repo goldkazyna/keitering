@@ -1238,7 +1238,7 @@ h2 {
         padding-bottom: 40px;
         min-height: 300px;
     }
-
+	
     .service-hero h1 {
         font-size: 32px;
     }

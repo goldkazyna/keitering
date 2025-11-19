@@ -457,7 +457,9 @@ h2 {
     .main {
         padding: 0 20px;
     }
-
+	.city-hero h1{
+		padding-top:0px;
+	}
     .city-hero {
         padding-top: 100px;
         padding-bottom: 40px;

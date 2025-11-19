@@ -684,7 +684,9 @@
     .pricing-hero h1 {
         font-size: 32px;
     }
-
+	.pricing-hero h1 {
+        padding-top:0px;
+    }
     .hero-subtitle {
         font-size: 18px;
     }

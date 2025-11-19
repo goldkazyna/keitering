@@ -59,11 +59,11 @@
         <h2 class="developerText">Доставка и сервис премиум класса!</h2>
         <div class="btnMainSection">
             <div class="btnMainOne">
-                <a class="btnMainSectionOne" href="">
+                <a class="btnMainSectionOne" href="https://wa.me/77012672992">
                     Получить расчёт
                     <img src="img/arrow.png">
                 </a>
-                <a class="btnMainSectionTwo" href="">
+                <a class="btnMainSectionTwo" href="/menu/coffee-break">
                     Меню
                 </a>
             </div>
@@ -108,7 +108,7 @@
         </div>
 
 <div class="moreCompanyAling">
-    <a href="" class="moreCompany">
+    <a href="/o-kompanii" class="moreCompany">
         Подробнее о компании
         <img src="img/arrow.png" alt="">
     </a>
@@ -155,7 +155,7 @@
     </div>
 
     <div class="moreCompanyAling">
-        <a href="" class="moreCompany">
+        <a href="https://wa.me/77012672992" class="moreCompany">
             Получить консультацию
             <img src="img/arrow.png" alt="">
         </a>
@@ -186,7 +186,7 @@
                     <span class="priceSevicesTitle">Цена от:</span>
                     <h2 class="priceSevicesAbout">2 800 тг/чел</h2>
                 </div>
-                <a class="servicesLinksText" href="">
+                <a class="servicesLinksText" href="/uslugi/coffee-break">
                 <div class="servicesLinks">
                         Подробнее
                 </div>
@@ -205,7 +205,7 @@
                     <span class="priceSevicesTitle">Цена от:</span>
                     <h2 class="priceSevicesAbout">2 800 тг/чел</h2>
                 </div>
-                <a class="servicesLinksText" href="">
+                <a class="servicesLinksText" href="/uslugi/furshet">
                     <div class="servicesLinks">
                         Подробнее
                     </div>
@@ -214,7 +214,7 @@
 
 
             <div class="servicesCard">
-                <h2 class="servicesCardTitle">Кофе - брейк</h2>
+                <h2 class="servicesCardTitle">Выездной банкет</h2>
                 <div class="imgServices">
                     <div class="imgServicesText">
                        
@@ -225,7 +225,7 @@
                     <span class="priceSevicesTitle">Цена от:</span>
                     <h2 class="priceSevicesAbout">2 800 тг/чел</h2>
                 </div>
-                <a class="servicesLinksText" href="">
+                <a class="servicesLinksText" href="/uslugi/banket">
                     <div class="servicesLinks">
                         Подробнее
                     </div>
@@ -236,18 +236,13 @@
         <div class="moreServices">
 
             <p class="moreServicesText">Нужна другая услуга? Позвоните нам!</p>
-            <a href="" class="moreServicesLinks">
+            <a href="https://wa.me/77012672992" class="moreServicesLinks">
                 Написать в WhatsApp
                 <img src="img/whatsAppGreen.png" alt="WhatsApp" class="icon-default">
                 <img src="img/watcapWite.png" alt="WhatsApp" class="icon-hover">
             </a>
         </div>
-        <div class="moreCompanyAling">
-            <a href="" class="moreCompany">
-                Получить консультацию
-                <img src="img/arrow.png" alt="">
-            </a>
-        </div>
+
 
     </div>
 </section>
@@ -320,11 +315,11 @@
 
 
     <div class="btnPrice">
-        <a class="btnMainSectionOne" href="">
+        <a class="btnMainSectionOne" href="/ceny/almaty">
             Смотреть все цены
             <img src="img/arrow.png">
         </a>
-        <a class="btnPriceOne" href="">
+        <a class="btnPriceOne" href="https://wa.me/77012672992">
             Заказать рассчёт
         </a>
 
@@ -459,7 +454,7 @@
 
         </div>
         <div class="moreCompanyAling">
-            <a href="" class="moreCompany">
+            <a href="/portfolio" class="moreCompany">
                 Смотреть все работы
                 <img src="img/arrow.png" alt="">
             </a>
@@ -563,7 +558,7 @@
     </div>
 </section>
 
-<section class="zakaz">
+<!--<section class="zakaz">
     <div class="main">
         <div class="main">
             <div class="blockCompanyMainText">
@@ -609,5 +604,5 @@
 
     </div>
 
-</section>
+</section>-->
 @endsection 
