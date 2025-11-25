@@ -90,7 +90,7 @@
 
         <div class="blockCompanyCard">
             <div class="blockCompanyCards" >
-            <h2 class="blockCompanyCardsNumber">12</h2>
+            <h2 class="blockCompanyCardsNumber">25</h2>
         <p class="blockCompanyCardsTitle">Лет на рынке Казахстана</p>
             </div>
             <div class="blockCompanyCards" >
@@ -203,7 +203,7 @@
                 </div>
                 <div class="priceSevices">
                     <span class="priceSevicesTitle">Цена от:</span>
-                    <h2 class="priceSevicesAbout">2 800 тг/чел</h2>
+                    <h2 class="priceSevicesAbout">4 300 тг/чел</h2>
                 </div>
                 <a class="servicesLinksText" href="/uslugi/furshet">
                     <div class="servicesLinks">
@@ -219,11 +219,11 @@
                     <div class="imgServicesText">
                        
                     </div>
-                    <img class="imgServicesMain" src="img/services3.png" alt="">
+                    <img class="imgServicesMain" src="img/services3.jpg" alt="">
                 </div>
                 <div class="priceSevices">
                     <span class="priceSevicesTitle">Цена от:</span>
-                    <h2 class="priceSevicesAbout">2 800 тг/чел</h2>
+                    <h2 class="priceSevicesAbout">15 000 тг/чел</h2>
                 </div>
                 <a class="servicesLinksText" href="/uslugi/banket">
                     <div class="servicesLinks">
@@ -341,64 +341,45 @@
 
         <div class="clientsLogos">
             <div class="image-comparison-different">
-                <img src="img/macGrey.png" alt="" class="static-gray">
-                <img src="img/img.png" alt="" class="hover-color">
+                <img src="img/client-1.jpg" alt="" class="static-gray">
+                <img src="img/client-1.jpg" alt="" class="hover-color">
             </div>
 
             <div class="image-comparison-different">
-                <img src="img/hyndaiGrey.png" alt="" class="static-gray">
-                <img src="img/hyndaiColor.png" alt="" class="hover-color">
+                <img src="img/client-2.jpg" alt="" class="static-gray">
+                <img src="img/client-2.jpg" alt="" class="hover-color">
             </div>
 
             <div class="image-comparison-different">
-                <img src="img/homeCredit.png" alt="" class="static-gray">
-                <img src="img/homeCredCol.png" alt="" class="hover-color">
+                <img src="img/client-3.jpg" alt="" class="static-gray">
+                <img src="img/client-3.jpg" alt="" class="hover-color">
             </div>
             <div class="image-comparison-different">
-                <img src="img/nurbank.png" alt="" class="static-gray">
-                <img src="img/nurbankCol.png" alt="" class="hover-color">
+                <img src="img/client-4.jpg" alt="" class="static-gray">
+                <img src="img/client-4.jpg" alt="" class="hover-color">
             </div>
             <div class="image-comparison-different">
-                <img src="img/deloitte.png" alt="" class="static-gray">
-                <img src="img/deloiteCol.png" alt="" class="hover-color">
+                <img src="img/client-5.jpg" alt="" class="static-gray">
+                <img src="img/client-5.jpg" alt="" class="hover-color">
             </div>
             <div></div>
             <div class="image-comparison-different">
-                <img src="img/loreal.png" alt="" class="static-gray">
-                <img src="img/lorealCol.png" alt="" class="hover-color">
+                <img src="img/client-6.jpg" alt="" class="static-gray">
+                <img src="img/client-6.jpg" alt="" class="hover-color">
             </div>
             <div class="image-comparison-different">
-                <img src="img/sumruk.png" alt="" class="static-gray">
-                <img src="img/sumrucCol.png" alt="" class="hover-color">
+                <img src="img/client-7.jpg" alt="" class="static-gray">
+                <img src="img/client-7.jpg" alt="" class="hover-color">
             </div>
             <div class="image-comparison-different">
-                <img src="img/blgryp.png" alt="" class="static-gray">
-                <img src="img/blgroupCol.png" alt="" class="hover-color">
+                <img src="img/client-8.jpg" alt="" class="static-gray">
+                <img src="img/client-8.jpg" alt="" class="hover-color">
             </div>
             <div class="image-comparison-different">
-                <img src="img/micrasoft.png" alt="" class="static-gray">
-                <img src="img/micrasoftLog.png" alt="" class="hover-color">
+                <img src="img/client-9.jpg" alt="" class="static-gray">
+                <img src="img/client-9.jpg" alt="" class="hover-color">
             </div>
-            <div class="image-comparison-different">
-                <img src="img/nomad.png" alt="" class="static-gray">
-                <img src="img/nomandCol.png" alt="" class="hover-color">
-            </div>
-            <div class="image-comparison-different">
-                <img src="img/pg.png" alt="" class="static-gray">
-                <img src="img/pgCol.png" alt="" class="hover-color">
-            </div>
-            <div class="image-comparison-different">
-                <img src="img/binorica.png" alt="" class="static-gray">
-                <img src="img/binoricaCol.png" alt="" class="hover-color">
-            </div>
-            <div class="image-comparison-different">
-                <img src="img/stroi.png" alt="" class="static-gray">
-                <img src="img/stoiCol.png" alt="" class="hover-color">
-            </div>
-            <div class="image-comparison-different">
-                <img src="img/kcell.png" alt="" class="static-gray">
-                <img src="img/kcellCol.png" alt="" class="hover-color">
-            </div>
+            
         </div>
 
 
@@ -419,10 +400,10 @@
 
             <div class="imgCard">
                 <a href="">
-                    <img class="imgWork" src="img/work1.png" alt="">
+                    <img class="imgWork" src="img/work1.jpg" alt="">
                     <div class="alingWorkText">
-                        <p class="work-date">22.10.2025</p>
-                        <h2 class="work-title">Текст в несколько предложений в три строки, описывающий услугу кратко, но достаточно ёмко, больше текста к...</h2>
+                        
+                        <h2 class="work-title">Организация Кофе-брейка</h2>
                     </div>
                 </a>
 
@@ -432,19 +413,18 @@
             <div class="imgCardTwo">
                 <div class="imgCard">
                     <a href="">
-                        <img class="imgWork" src="img/work2.png" alt="">
+                        <img class="imgWork" src="img/work-2.jpg" alt="">
                         <div class="alingWorkText">
-                            <p class="work-date">22.10.2025</p>
-                            <h2 class="work-title">Текст в несколько предложений в три строки, описывающий услугу кратко, но достаточно ёмко, больше текста к...</h2>
+                            
+                            <h2 class="work-title">Организация фуршета</h2>
                         </div>
                     </a>
                 </div>
                 <div class="imgCard">
                     <a href="">
-                        <img class="imgWork" src="img/work3.png" alt="">
+                        <img class="imgWork" src="img/work-3.jpg" alt="">
                         <div class="alingWorkText">
-                            <p class="work-date">22.10.2025</p>
-                            <h2 class="work-title">Текст в несколько предложений в три строки, описывающий услугу кратко, но достаточно ёмко, больше текста к...</h2>
+                            <h2 class="work-title">Организация банкета</h2>
                         </div>
                     </a>
 
@@ -463,100 +443,7 @@
     </div>
 </section>
 
-<section class="reviews">
-    <div class="main">
-        <div class="blockCompanyMainText">
-            <img class="companyLogo" src="img/decorLeft.png" alt="">
-            <h2 class="blockCompanyMainTextTitel">Отзывы наших клиентов</h2>
-            <img class="companyLogo" src="img/decorRight.png" alt="">
-        </div>
 
-
-    <div class="reviewCadrs" >
-        <div class="reviews-slider-container">
-            <button class="slider-arrow slider-arrow-prev">‹</button>
-            <div class="reviews-slider">
-                <div class="reviewCadr">
-                    <div class="video-container">
-                        <video src="video/reviews.mp4" loop>
-                            Ваш браузер не поддерживает видео
-                        </video>
-                        <button class="play-pause-btn">⏸</button>
-                    </div>
-                    <h2>ТОО ”Рога и копыта”</h2>
-                    <div class="reviewCadrText">
-                        <p>Алексей</p>
-                        <p>Директолог</p>
-                    </div>
-                </div>
-
-                <div class="reviewCadr">
-                    <div class="video-container">
-                        <video src="video/reviews.mp4" loop>
-                            Ваш браузер не поддерживает видео
-                        </video>
-                        <button class="play-pause-btn">⏸</button>
-                    </div>
-                    <h2>Компания "Вектор"</h2>
-                    <div class="reviewCadrText">
-                        <p>Мария</p>
-                        <p>Маркетолог</p>
-                    </div>
-                </div>
-
-                <div class="reviewCadr">
-                    <div class="video-container">
-                        <video src="video/reviews.mp4" loop>
-                            Ваш браузер не поддерживает видео
-                        </video>
-                        <button class="play-pause-btn">⏸</button>
-                    </div>
-                    <h2>Компания "Вектор"</h2>
-                    <div class="reviewCadrText">
-                        <p>Мария</p>
-                        <p>Маркетолог</p>
-                    </div>
-                </div>
-
-
-                <div class="reviewCadr">
-                    <div class="video-container">
-                        <video src="video/reviews.mp4" loop>
-                            Ваш браузер не поддерживает видео
-                        </video>
-                        <button class="play-pause-btn">⏸</button>
-                    </div>
-                    <h2>Компания "Вектор"</h2>
-                    <div class="reviewCadrText">
-                        <p>Мария</p>
-                        <p>Маркетолог</p>
-                    </div>
-                </div>
-
-
-                <div class="reviewCadr">
-                    <div class="video-container">
-                        <video src="video/reviews.mp4" loop>
-                            Ваш браузер не поддерживает видео
-                        </video>
-                        <button class="play-pause-btn">⏸</button>
-                    </div>
-                    <h2>Компания "Вектор"</h2>
-                    <div class="reviewCadrText">
-                        <p>Мария</p>
-                        <p>Маркетолог</p>
-                    </div>
-                </div>
-            </div>
-            <button class="slider-arrow slider-arrow-next">›</button>
-        </div>
-
-
-    </div>
-
-
-    </div>
-</section>
 
 <!--<section class="zakaz">
     <div class="main">

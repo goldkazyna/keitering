@@ -72,12 +72,10 @@
                                 <a href="https://t.me/ezhikcatering" target="_blank" rel="noopener" title="Telegram" class="social-icon">
                                     <img src="{{ asset('img/logoTg.png') }}" alt="Telegram">
                                 </a>
-                                <a href="https://instagram.com/ezhikcatering" target="_blank" rel="noopener" title="Instagram" class="social-icon">
+                                <a href="https://www.instagram.com/ezhikcatering.kz?igsh=MXJtODRxOW15cjNjYQ%3D%3D&utm_source=qr" target="_blank" rel="noopener" title="Instagram" class="social-icon">
                                     <img src="{{ asset('img/logoInst.png') }}" alt="Instagram">
                                 </a>
-                                <a href="https://vk.com/ezhikcatering" target="_blank" rel="noopener" title="VK" class="social-icon">
-                                    <img src="{{ asset('img/logoVk.png') }}" alt="VK">
-                                </a>
+                                
                             </div>
                         </div>
                     </div>

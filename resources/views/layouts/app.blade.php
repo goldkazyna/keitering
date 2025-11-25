@@ -43,6 +43,7 @@
 						<a href="{{ route('uslugi.coffee-break') }}">Кофе брейк</a>
 						<a href="{{ route('uslugi.furshet') }}">Фуршет</a>
 						<a href="{{ route('uslugi.banket') }}">Выездной банкет</a>
+						<a href="{{ route('uslugi.arenda-oborudovaniya') }}">Аренда оборудования</a>
 					</div>
 				</div>
 				
@@ -177,18 +178,16 @@
                 в Алматы и Астане.</h2>
             <h2 class="blockFooterText">Решим все проблемы за вас! </h2>
             <div class="linksFooter">
-                <a href="">
+                <a href="https://wa.me/77012672992">
                     <img src="{{ asset('img/logoWathap.png') }}" alt="">
                 </a>
-                <a href="">
+                <a href="https://t.me/ezhikcatering">
                     <img src="{{ asset('img/logoTg.png') }}" alt="">
                 </a>
-                <a href="">
+                <a href="https://www.instagram.com/ezhikcatering.kz?igsh=MXJtODRxOW15cjNjYQ%3D%3D&utm_source=qr">
                     <img src="{{ asset('img/logoInst.png') }}" alt="">
                 </a>
-                <a href="">
-                    <img src="{{ asset('img/logoVk.png') }}" alt="">
-                </a>
+                
             </div>
         </div>
 <div class="blockFooterContact">
@@ -200,6 +199,7 @@
                 <li><a href="{{ route('uslugi.furshet') }}">Фуршет</a></li>
                 <li><a href="{{ route('uslugi.banket') }}">Выездной банкет</a></li>
                 <li><a href="{{ route('uslugi.vyezdnoy-keitering') }}">Выездной кейтеринг</a></li>
+				<li><a href="{{ route('uslugi.arenda-oborudovaniya') }}">Аренда оборудования</a></li>
             </ul>
         </div>
     </div>
@@ -217,15 +217,15 @@
         <div class="linksFooterAbout">
             <div class="contactsFooter">
                 <img src="{{ asset('img/phone.png') }}" alt="">
-                <p class="contactsFooterText">+7 (707) 817-17-88</p>
+                <p class="contactsFooterText">+7 (701) 267-29-92</p>
             </div>
             <div class="contactsFooter">
                 <img src="{{ asset('img/mail.png') }}" alt="">
-                <p class="contactsFooterText">hello@ezhik.kz</p>
+                <p class="contactsFooterText">info@ezhik-catering.kz</p>
             </div>
             <div class="contactsFooter">
                 <img src="{{ asset('img/map.png') }}" alt="">
-                <p class="contactsFooterText">г.Алматы, ул. Пушкина 34</p>
+                <p class="contactsFooterText">г.Алматы, ул. Пятницкого, 73</p>
             </div>
             <div class="contactsFooter">
                 <img src="{{ asset('img/clock.png') }}" alt="">

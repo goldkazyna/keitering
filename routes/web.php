@@ -104,7 +104,9 @@ Route::get('/uslugi/banket/astana', function () {
 Route::get('/uslugi/banket/nedorogo', function () {
     return view('pages.uslugi.banket.nedorogo');
 })->name('uslugi.banket.nedorogo');
-
+Route::get('/uslugi/arenda-oborudovaniya', function () {
+    return view('pages.uslugi.arenda-oborudovaniya');
+})->name('uslugi.arenda-oborudovaniya');
 // Выездной кейтеринг
 Route::get('/uslugi/vyezdnoy-keitering', function () {
     return view('pages.uslugi.vyezdnoy-keitering');
