@@ -217,7 +217,11 @@
         <div class="linksFooterAbout">
             <div class="contactsFooter">
                 <img src="{{ asset('img/phone.png') }}" alt="">
-                <p class="contactsFooterText">+7 (701) 267-29-92</p>
+				<p class="contactsFooterText">Алматы: +7 (701) 267-29-92</p>
+            </div>
+			<div class="contactsFooter">
+                <img src="{{ asset('img/phone.png') }}" alt="">
+				<p class="contactsFooterText">Астана: +7 (701) 110-00-11</p>
             </div>
             <div class="contactsFooter">
                 <img src="{{ asset('img/mail.png') }}" alt="">
