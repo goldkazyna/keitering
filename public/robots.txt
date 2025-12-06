@@ -1,2 +1,24 @@
 User-agent: *
-Disallow:
+Allow: /
+
+# Закрываем от индексации
+Disallow: /admin/
+Disallow: /storage/
+Disallow: /_debugbar/
+Disallow: /api/
+
+# Sitemap
+Sitemap: https://ezhik-catering.kz/sitemap.xml
+
+# Дополнительные правила для основных поисковиков
+User-agent: Googlebot
+Allow: /
+
+User-agent: Yandex
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Mail.Ru
+Allow: /

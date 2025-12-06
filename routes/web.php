@@ -1,5 +1,5 @@
 <?php
-
+use App\Http\Controllers\SitemapController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\PortfolioController;
@@ -182,7 +182,7 @@ Route::get('/almaty/prices', function () {
 Route::get('/astana/prices', function () {
     return view('pages.astana.prices');
 })->name('astana.prices');
-
+Route::get('/sitemap.xml', [SitemapController::class, 'index'])->name('sitemap');
 // Админ-панель
 Route::prefix('admin')->name('admin.')->group(function () {
     Route::get('/login', [App\Http\Controllers\Admin\AuthController::class, 'showLoginForm'])->name('login');
@@ -206,3 +206,4 @@ Route::prefix('admin')->name('admin.')->group(function () {
         Route::post('/logout', [App\Http\Controllers\Admin\AuthController::class, 'logout'])->name('logout');
     });
 });
+
