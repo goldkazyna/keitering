@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use App\Models\News;
 use App\Models\PortfolioCategory;
-use Illuminate\Http\Response;
 
 class SitemapController extends Controller
 {
@@ -14,9 +13,23 @@ class SitemapController extends Controller
         $urls = array_merge($urls, $this->getBlogUrls());
         $urls = array_merge($urls, $this->getPortfolioUrls());
 
-        $content = view('sitemap.index', compact('urls'))->render();
+        $xml = '<?xml version="1.0" encoding="UTF-8"?>' . "\n";
+        $xml .= '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">' . "\n";
 
-        return response($content, 200)
+        foreach ($urls as $item) {
+            $xml .= '  <url>' . "\n";
+            $xml .= '    <loc>' . htmlspecialchars($item['url']) . '</loc>' . "\n";
+            $xml .= '    <changefreq>' . $item['changefreq'] . '</changefreq>' . "\n";
+            $xml .= '    <priority>' . $item['priority'] . '</priority>' . "\n";
+            if (isset($item['lastmod'])) {
+                $xml .= '    <lastmod>' . $item['lastmod'] . '</lastmod>' . "\n";
+            }
+            $xml .= '  </url>' . "\n";
+        }
+
+        $xml .= '</urlset>';
+
+        return response($xml, 200)
             ->header('Content-Type', 'application/xml');
     }
 
