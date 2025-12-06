@@ -9,7 +9,7 @@
     <title>@yield('title', 'Ёжик кейтеринг')</title>
     <meta name="description" content="@yield('description', 'Кейтеринг любых мероприятий в Алматы и Астане')">
     <meta name="keywords" content="@yield('keywords', 'кейтеринг, алматы, астана')">
-    
+    <meta name="google-site-verification" content="gtC9No-MdSjHNyzw4y-WMYLMTb3Xg5osUKTPb43eVHk" />
     {{-- Стили --}}
     <link rel="stylesheet" href="{{ asset('style/main.css') }}">
     <link rel="stylesheet" href="{{ asset('style/mainMobile.css') }}">
