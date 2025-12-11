@@ -207,3 +207,5 @@ Route::prefix('admin')->name('admin.')->group(function () {
     });
 });
 
+Route::redirect('/furshet', '/uslugi/furshet', 301);
+
