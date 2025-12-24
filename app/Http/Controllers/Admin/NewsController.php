@@ -40,7 +40,7 @@ class NewsController extends Controller
         
         // Загрузка изображения
         if ($request->hasFile('image')) {
-            $validated['image'] = $request->file('image')->store('news', 'public');
+            $validated['image'] = $this->uploadImage($request->file('image'));
         }
 
         // Установка даты публикации
@@ -81,9 +81,9 @@ class NewsController extends Controller
         if ($request->hasFile('image')) {
             // Удаление старого изображения
             if ($news->image) {
-                Storage::disk('public')->delete($news->image);
+                $this->deleteImage($news->image);
             }
-            $validated['image'] = $request->file('image')->store('news', 'public');
+            $validated['image'] = $this->uploadImage($request->file('image'));
         }
 
         // Установка/снятие даты публикации
@@ -103,11 +103,51 @@ class NewsController extends Controller
     {
         // Удаление изображения
         if ($news->image) {
-            Storage::disk('public')->delete($news->image);
+            $this->deleteImage($news->image);
         }
 
         $news->delete();
 
         return redirect()->route('admin.news.index')->with('success', 'Новость успешно удалена!');
+    }
+
+    /**
+     * Загрузка изображения с копированием в public/storage
+     */
+    private function uploadImage($file)
+    {
+        // Сохраняем в storage/app/public/news
+        $path = $file->store('news', 'public');
+        
+        // Копируем в public/storage/news для хостингов без симлинков
+        $publicPath = public_path('storage/' . $path);
+        $publicDirectory = dirname($publicPath);
+        
+        if (!file_exists($publicDirectory)) {
+            mkdir($publicDirectory, 0755, true);
+        }
+        
+        $storagePath = storage_path('app/public/' . $path);
+        if (file_exists($storagePath)) {
+            copy($storagePath, $publicPath);
+            chmod($publicPath, 0644);
+        }
+        
+        return $path;
+    }
+
+    /**
+     * Удаление изображения из обоих мест
+     */
+    private function deleteImage($path)
+    {
+        // Удаляем из storage/app/public
+        Storage::disk('public')->delete($path);
+        
+        // Удаляем из public/storage
+        $publicPath = public_path('storage/' . $path);
+        if (file_exists($publicPath)) {
+            unlink($publicPath);
+        }
     }
 }
