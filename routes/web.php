@@ -178,7 +178,9 @@ Route::get('/uslugi/services/banket', function () {
 Route::get('/almaty/prices', function () {
     return view('pages.almaty.prices');
 })->name('almaty.prices');
-
+Route::get('/iftar', function () {
+    return view('pages.iftar');
+})->name('iftar');
 Route::get('/astana/prices', function () {
     return view('pages.astana.prices');
 })->name('astana.prices');

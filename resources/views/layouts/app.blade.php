@@ -62,6 +62,7 @@
 						<a href="{{ route('uslugi.furshet') }}">Фуршет</a>
 						<a href="{{ route('uslugi.banket') }}">Выездной банкет</a>
 						<a href="{{ route('uslugi.arenda-oborudovaniya') }}">Аренда оборудования</a>
+						
 					</div>
 				</div>
 				
@@ -71,6 +72,7 @@
 						<a href="{{ route('menu.coffee-break') }}">Меню кофе брейка</a>
 						<a href="{{ route('menu.furshet') }}">Фуршетное меню</a>
 						<a href="{{ route('menu.banket') }}">Банкетное меню</a>
+						<a href="{{ route('iftar') }}">Ифтар</a>
 					</div>
 				</div>
 				
